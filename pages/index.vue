@@ -67,8 +67,8 @@ const login = async () => {
   console.log(data);
 };
 
-// const route = useRoute();
-// const token = route.query.token || null;
+const route = useRoute();
+const token = route.query.token || null;
 
 // Refs for storing songs
 const recommendedSongs = ref([]);
