@@ -4,13 +4,12 @@
       <h1 class="mb-6 text-4xl font-bold">Welcome to Muse</h1>
 
       <!-- Conditionally render login or logged-in message -->
-      <a
+      <button @click="login"
         v-if="!token"
-        href="/api/login"
         class="px-6 py-3 text-lg text-white transition bg-green-500 rounded-lg hover:bg-green-600"
       >
         Login with Spotify
-      </a>
+      </button>
       <span
         v-else
         class="px-6 py-3 text-lg text-white transition bg-green-500 rounded-lg hover:bg-green-600"
@@ -57,6 +56,17 @@
 import { useRoute } from "vue-router";
 import { ref, computed, onMounted } from "vue";
 import HomeCard from "~/components/HomeCard.vue"; // Import HomeCard component
+
+
+const login= async()=>{
+const response=await useFetch('/api/login')
+const data=response.data.value
+window.location.href=data
+
+console.log(data)
+
+
+}
 
 const route = useRoute();
 const token = route.query.token || null;
