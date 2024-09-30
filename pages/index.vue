@@ -6,17 +6,17 @@
       <!-- Conditionally render login or logged-in message -->
       <button
         @click="login"
-        v-if="!token"
+        
         class="px-6 py-3 text-lg text-white transition bg-green-500 rounded-lg hover:bg-green-600"
       >
         Login with Spotify
       </button>
-      <span
+      <!-- <span
         v-else
         class="px-6 py-3 text-lg text-white transition bg-green-500 rounded-lg hover:bg-green-600"
       >
         You are logged in
-      </span>
+      </span> -->
     </div>
 
     <!-- Personalized Recommendations Section -->
@@ -59,15 +59,16 @@ import { ref, computed, onMounted } from "vue";
 import HomeCard from "~/components/HomeCard.vue"; // Import HomeCard component
 
 const login = async () => {
-  const response = await useFetch("/api/login");
-  const data = response.data.value;
-  window.location.href = data;
-alert('hello')
+  const response = await $fetch("/api/login");
+  console.log(response)
+  // const data = response.data.value;
+  window.location.href = response;
+  // alert("hello");
   console.log(data);
 };
 
-const route = useRoute();
-const token = route.query.token || null;
+// const route = useRoute();
+// const token = route.query.token || null;
 
 // Refs for storing songs
 const recommendedSongs = ref([]);
