@@ -1,13 +1,13 @@
 <template>
   <div class="search-container">
-    <div class="text-center mb-6">
-      <h1 class="text-4xl font-bold">Search for Music</h1>
+    <div class="text-center mb-6 space-y-2 sm:space-y-0">
+      <h1 class="text-2xl sm:text-4xl font-bold">Search for Music</h1>
       <!-- Search Input Field -->
       <input
         v-model="query"
         type="text"
         placeholder="Search for songs, albums, artists..."
-        class="px-4 py-2 border rounded-md w-1/2"
+        class="px-4 py-2 border rounded-md sm:w-1/2 w-full"
         @keyup.enter="search"
       />
       <button

@@ -1,13 +1,7 @@
 <template>
   <div>
     <div class="text-center">
-      <h1 class="mb-6 text-4xl font-bold">Welcome to Muse</h1>
-      <a
-        href="/api/login"
-        class="px-6 py-3 text-lg text-white transition bg-green-500 rounded-lg hover:bg-green-600"
-      >
-        Login with Spotify
-      </a>
+      
     </div>
 
     <!-- User's Playlists Section -->

@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="bg-[#121e31] h-screen fixed top-0 left-0 w-[250px] py-6 px-4 font-[sans-serif] tracking-wide overflow-auto"
+      class="bg-[#121e31] h-screen fixed top-0 left-0 sm:w-[250px] py-6 px-4 font-[sans-serif] tracking-wide overflow-auto"
     >
       <nuxt-link to="/">
         <div class="flex flex-wrap items-center cursor-pointer justify-center">
@@ -60,7 +60,7 @@
       </ul>
     </nav>
     <!-- Output the page content -->
-    <div class="ml-[250px]">
+    <div class="sm:ml-[250px]  ml-[170px]">
       <slot />
     </div>
   </div>
