@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   const authUrl = `https://accounts.spotify.com/authorize?response_type=code&client_id=${clientId}&scope=${encodeURIComponent(
     scope
   )}&redirect_uri=${encodeURIComponent(redirectUri)}`;
-console.log(authUrl,"authentication")
+  console.log(authUrl, "authentication");
   // Redirect user to Spotify login page
   return authUrl;
 });
